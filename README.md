@@ -64,24 +64,28 @@ Request example:
 }
 ```
 
-Response - Success:
+Response - Success (`statusCode: 200`):
 
 ```json
 {
-    // Always be `200` when success.
 	"statusCode": 200,
 	"data": {
-        // The original source file, or null if this information is not available.
         "source": "../src/example.ts",
-        // The line number in the original source, or null if this information is not available. The line number is 1-based.
         "line": 2,
-        // The column number in the original source, or null if this information is not available. The column number is 0-based.
         "column": 2,
-        // The original identifier, or null if this information is not available.
 		"name": "key"
 	}
 }
 ```
+
+Data:
+
+| Name | Type | Description |
+| --- | --- | --- |
+| source | string or null | The original source file, or null if this information is not available. |
+| line | integer or null | The line number in the original source, or null if this information is not available. The line number is 1-based. |
+| column | integer or null | The column number in the original source, or null if this information is not available. The column number is 0-based. |
+| name | string or null | The original identifier, or null if this information is not available. |
 
 
 # License
