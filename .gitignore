@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+/data/
+/dev/
+/coverage/
+/dist/
+/.vscode/
+/package-lock.json
+
+/.env*
+!/.env.example
+
+/sourcemaps/** 
+!**/.gitkeep
